@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import css from '../PhoneBook.module.css';
+import css from './PhoneBook.module.css';
 
 const Conteiner = ({title, children}) => (
   <div className={css.conteiner}>

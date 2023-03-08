@@ -1,29 +1,27 @@
 import { useState } from 'react';
-import css from '../PhoneBook.module.css';
+import css from './PhoneBook.module.css';
 
-import initialState from 'components/initialState';
+import initialState from 'components/phoneBook/initialState';
 
+function Form({ onSubmit }) {
+  const [state, setState] = useState({ ...initialState });
 
-function Form({onSubmit}) {
-  const [state, setState] = useState({...initialState});
-
-  const hendleChange = ({target}) => {
+  const hendleChange = ({ target }) => {
     const { value, name } = target;
 
     setState(prevState => {
-      return {...prevState, [name]: value}
-    })
-  }
+      return { ...prevState, [name]: value };
+    });
+  };
 
   const hendleSubmit = e => {
     e.preventDefault();
 
-
-    onSubmit({name, number});
-    setState({...initialState})
+    onSubmit({ name, number });
+    setState({ ...initialState });
   };
 
-  const {name, number} = state;
+  const { name, number } = state;
   return (
     <form onSubmit={hendleSubmit} className={css.form}>
       <label className={css.label}>
