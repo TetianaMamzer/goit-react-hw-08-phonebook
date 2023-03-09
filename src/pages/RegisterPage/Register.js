@@ -1,6 +1,16 @@
+import { useDispatch } from "react-redux";
+import RegisterForm from "components/registerForm/RegisterForm";
+
+import { signup } from "redux/auth/auth-operations";
+
 const RegisterPage = () => {
+  const dispatch = useDispatch();
+  
+  const handleSignup = (data) => {
+    dispatch(signup(data))
+  }
   return (
-    <h1>Register</h1>
+    <RegisterForm onSubmit={handleSignup}/>
   )
 }
 
