@@ -14,7 +14,7 @@ const Conteiner = lazy(() => import('./components/phoneBook/Conteiner'));
 const ContactsPage = lazy(() => import('./pages/ContactsPage/Contacts'));
 const LoginPage = lazy(() => import('./pages/LoginPage/Login'));
 const RegisterPage = lazy(() => import('./pages/RegisterPage/Register'));
-const HomePage = lazy(() => import('./components/HomePage'))
+const HomePage = lazy(() => import('./components/homePage/HomePage'))
 
 export default function App() {
   return (
