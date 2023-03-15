@@ -1,29 +1,35 @@
-import items from './items';
-import css from './navbar.module.css'
+
+import css from './navbar.module.css';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import items from './items';
 
 import { isUserLogin } from 'redux/auth/auth-selectors';
-import NavbarContacts from 'navbar/NavbarContacts/NavbarContacts';
+
 import NavbarUser from 'navbar/NavbarUser/NavbarUser';
 
-const isActive = ({isActive}) => {
+const isActive = ({ isActive }) => {
   return isActive ? `${css.list} ${css.active}` : css.list;
-}
+};
 const Navbar = () => {
-
   const isLogin = useSelector(isUserLogin);
-
-  const elements = items.map(({ id, text, link }) => (
+console.log(items)
+  const filteredItems = !isLogin
+    ? items.filter(( item) => {
+      console.log(item.private)
+      return !item.private})
+    : items.filter(( item ) => item.private);
+  const elements = filteredItems.map(({ id, text, link }) => (
     <li key={id}>
-      <NavLink to={link} className={isActive}>{text}</NavLink>
+      <NavLink to={link} className={isActive}>
+        {text}
+      </NavLink>
     </li>
   ));
   return (
     <>
-    { !isLogin && <ul className={css.group}>{elements} </ul>}
-    { isLogin && <div className={css.wrapper}><NavbarContacts/>
-    <NavbarUser/></div>}
+      {!isLogin && <ul className={css.group}>{elements} </ul>}
+      {isLogin && <div className={css.wrapper}><ul className={css.group}>{elements} </ul> <NavbarUser/></div>}
     </>
   );
 };

@@ -1,10 +1,15 @@
 import { Navigate, Outlet } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { isUserLogin } from 'redux/auth/auth-selectors';
+import Loader from 'components/loader/Loader';
+
+import { getAuth } from 'redux/auth/auth-selectors';
 
 const PublicRoute = () => {
-  const isLogin = useSelector(isUserLogin);
+  const {isLogin, token} = useSelector(getAuth);
 
+  if(!isLogin && token) {
+    return <Loader/>
+  }
   if (isLogin) {
     return <Navigate to="/contacts" />;
   }
