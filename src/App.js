@@ -14,6 +14,7 @@ const Conteiner = lazy(() => import('./components/phoneBook/Conteiner'));
 const ContactsPage = lazy(() => import('./pages/ContactsPage/Contacts'));
 const LoginPage = lazy(() => import('./pages/LoginPage/Login'));
 const RegisterPage = lazy(() => import('./pages/RegisterPage/Register'));
+const HomePage = lazy(() => import('./components/HomePage'))
 
 export default function App() {
   return (
@@ -32,7 +33,7 @@ export default function App() {
                   <Route element={<PrivateRoute />}>
                     <Route path="/contacts" element={<ContactsPage />} />
                   </Route>
-                  <Route path="*" element={<ContactsPage />} />
+                  <Route path="*" element={<HomePage/>} />
                 </Routes>
               </Conteiner>
             </Suspense>
