@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_homework_template=self.webpackChunkreact_homework_template||[]).push([[578],{2578:function(e,t,o){o.r(t),o.d(t,{default:function(){return c}});var r="homePage_text__wGBKu",a=o(184),c=function(){return(0,a.jsx)("h2",{className:r,children:"Hello, go to your contacts!"})}}}]);
+//# sourceMappingURL=578.61c88fb1.chunk.js.map

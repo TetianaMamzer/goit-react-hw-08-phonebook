@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/578.b02edcc6.chunk.css","mappings":"AAAA,sBAIE,UAAW,CAHX,YAAa,CAEb,cAAe,CADf,sBAGF","sources":["components/homePage/homePage.module.css"],"sourcesContent":[".text {\n  display: flex;\n  justify-content: center;\n  font-size: 30px;\n  color: #fff;\n}"],"names":[],"sourceRoot":""}
