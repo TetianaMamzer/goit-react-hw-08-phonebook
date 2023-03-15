@@ -32,7 +32,7 @@ export default function App() {
                   <Route element={<PrivateRoute />}>
                     <Route path="/contacts" element={<ContactsPage />} />
                   </Route>
-                  <Route path="*" element={<RegisterPage />} />
+                  <Route path="*" element={<ContactsPage />} />
                 </Routes>
               </Conteiner>
             </Suspense>
