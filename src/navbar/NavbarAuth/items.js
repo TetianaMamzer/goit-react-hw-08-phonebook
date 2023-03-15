@@ -13,11 +13,6 @@ const items = [
     link: "/login"
   },
 
-  {
-    id: nanoid(),
-    text: "Contacts",
-    link: "/contacts"
-  },
 ];
 
 export default items;

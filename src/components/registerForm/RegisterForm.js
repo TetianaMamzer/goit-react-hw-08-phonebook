@@ -16,8 +16,8 @@ const RegisterForm = ({ onSubmit }) => {
   return (
     <form onSubmit={handleSubmit} className={css.form}>
       <TextField value={name} onChange={handleChange} type='text' required name='name' label='Name' placeholder='User name'/>
-      <TextField value={email} onChange={handleChange} type='email' required name='email' label='Email' placeholder='User email'/>
-      <TextField value={password} onChange={handleChange} type='password' required name='password' label='Password' placeholder='User password'/>
+      <TextField value={email} onChange={handleChange} type='email' required name='email' label='Email' placeholder='Email@mail.com'/>
+      <TextField value={password} onChange={handleChange} type='password' required name='password' label='Password' placeholder='6 simbols at least' />
       <Button type='submit'>Register</Button>
     </form>
   );

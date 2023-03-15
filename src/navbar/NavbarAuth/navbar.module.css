@@ -36,3 +36,10 @@
   background-repeat: no-repeat;
   display: block;
 }
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-bottom: 40px;
+}
