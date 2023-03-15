@@ -20,7 +20,7 @@ export default function App() {
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <AuthProvider>
-          <BrowserRouter>
+          <BrowserRouter basename='/goit-react-hw-08-phonebook'>
             <Suspense fallback={<Loader />}>
               <Conteiner title="Phonebook">
                 <Navbar />
